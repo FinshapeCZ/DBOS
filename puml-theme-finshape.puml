@@ -1,0 +1,366 @@
+/'
+' Finshape Style for PlantUML'
+'/
+
+!define FONT Poppins
+!define FONTINT Inter
+
+!define PRIMARY_COLOR #f44d4d
+!define SECONDARY_COLOR #192550
+!define TERNARY_COLOR #eaeff2
+!define QUATERNARY_COLOR #3dab8c
+
+!define BACKGROUND_COLOR #eaeff2
+!define LIGHT_BACKGROUND_COLOR #f6f9fb
+!define TRANSPARENT_BACKGROUND_COLOR #FFFFFF90
+!define GROUP_BACKGROUND_COLOR WhiteSmoke
+
+!define DARK_BORDER_COLOR #192550
+!define LIGHT_BORDERD_COLOR #f6f9fb
+
+!define TEXT_COLOR_DARK #192550
+!define TEXT_COLOR_LIGHT White
+
+!define FONT_SMALL 6
+!define FONT_NORMAL 10
+!define FONT_LARGE 14
+
+!define THIN 0.3
+!define NORMAL 0.5
+!define THICK 1
+
+'General
+skinparam shadowing false
+skinparam handwritten false
+skinparam backgroundColor transparent
+skinparam componentStyle uml2
+skinparam dpi 320
+skinparam padding 2
+
+'Default
+skinparam default{
+  'Font Style
+  FontColor TEXT_COLOR_DARK
+  FontName FONTINT
+  FontSize FONT_NORMAL
+  FontStyle plain
+
+  'Other Style
+  TextAlignment center
+}
+
+'Header (inherits from Default)
+skinparam header {
+  FontName FONT
+  FontSize  FONT_SMALL
+}
+
+'Footer (inherits from Default)
+skinparam footer {
+  FontName FONT
+  FontSize  FONT_SMALL
+}
+
+'Title (inherits from Default)
+skinparam title {
+  FontName FONTINT
+  FontSize FONT_NORMAL
+}
+
+'Arrow
+skinparam arrow {
+  'Font Style (inherits from Default)
+  FontSize  FONT_SMALL
+
+  'Color
+  Color SECONDARY_COLOR
+  LollipopColor PRIMARY_COLOR
+  Thickness 1
+  MessageAlignment center
+}
+
+
+'Note
+skinparam note {
+  'Font Style
+  FontColor TEXT_COLOR_DARK
+  FontName FONTINT
+  FontSize  FONT_SMALL
+
+  'Color
+  BackgroundColor LemonChiffon
+  BorderColor DARK_BORDER_COLOR
+  BorderThickness THIN
+}
+
+'Participant
+skinparam participant {
+  'Font Style (inherits from Default)
+  FontSize FONT_NORMAL
+  FontColor TEXT_COLOR_LIGHT
+  FontName FONTINT
+  'Border Color and Padding
+  BackgroundColor PRIMARY_COLOR
+  BorderColor DARK_BORDER_COLOR
+  Padding 20
+}
+
+'Actor
+skinparam actor {
+  'Font Style (inherits from Default)
+  FontSize FONT_NORMAL
+
+  'Border Color
+  BackgroundColor PRIMARY_COLOR
+  BorderColor DARK_BORDER_COLOR
+}
+
+'Activity Diagramms
+skinparam activity {
+  StartColor PRIMARY_COLOR
+  EndColor SECONDARY_COLOR
+  BackgroundColor PRIMARY_COLOR
+  BorderColor PRIMARY_COLOR
+  FontColor TEXT_COLOR_LIGHT
+  FontName FONT
+  BarColor SECONDARY_COLOR
+}
+skinparam activityDiamond {
+  BackgroundColor BACKGROUND_COLOR
+  BorderColor BACKGROUND_COLOR
+  FontColor TEXT_COLOR_DARK
+  FontName FONT
+}
+
+'State Diagramms
+skinparam state {
+  StartColor PRIMARY_COLOR
+  EndColor SECONDARY_COLOR
+  BackgroundColor PRIMARY_COLOR
+  BackgroundColor<<Warning>> Red
+  BorderColor DARK_BORDER_COLOR
+  FontColor TEXT_COLOR_LIGH
+  FontName FONT
+}
+
+'Sequence Diagrams
+'hide footbox
+skinparam BoxPadding 10
+
+skinparam sequence {
+  LifeLineBorderColor SECONDARY_COLOR
+  LifeLineBackgroundColor SECONDARY_COLOR
+  'Box (inherits from Default)
+  BoxBackgroundColor  LIGHT_BACKGROUND_COLOR
+  BoxBorderColor BACKGROUND_COLOR
+
+  'Divider (inherits from Default)
+  DividerBackgroundColor White
+  DividerBorderColor Black
+  DividerBorderThickness NORMAL
+
+  'Group (inherits from Default)
+  GroupFontName FONTINT
+  GroupHeaderFontName FONT
+  GroupBackgroundColor GROUP_BACKGROUND_COLOR
+  GroupBodyBackgroundColor  TRANSPARENT_BACKGROUND_COLOR
+  GroupBorderColor DARK_BORDER_COLOR
+  GroupBorderThickness NORMAL
+
+  'Life line
+  LifeLineBackgroundColor  BACKGROUND_COLOR
+  LifeLineBorderColor DARK_BORDER_COLOR
+  LifeLineBorderThickness THICK
+
+  'Message
+  MessageAlignment center
+  MessageTextAlignment left
+
+  'Participant
+  Participant plain
+  ParticipantBorderThickness 0
+}
+
+skinparam component {
+  BorderColor PRIMARY_COLOR
+  BackgroundColor PRIMARY_COLOR
+  'ArrowColor SECONDARY_COLOR
+  FontColor TEXT_COLOR_LIGH
+  FontName FONT
+}
+
+skinparam interface {
+  BorderColor PRIMARY_COLOR
+  BackgroundColor PRIMARY_COLOR
+  'ArrowColor SECONDARY_COLOR
+  FontColor TEXT_COLOR_DARK
+  FontName FONT
+}
+
+skinparam rectangle {
+  'Border Color
+  BorderColor DARK_BORDER_COLOR
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderThickness THIN
+
+  'Font Style (inherits from Default)
+  'FontColor TEXT_COLOR_DARK
+  'FontName FONTINT
+  'FontSize  FONT_NORMAL
+  StereotypeFontColor TEXT_COLOR_DARK
+  StereotypeFontName FONTINT
+  StereotypeFontSize FONT_SMALL
+  StereotypeFontStyle plain
+}
+
+'Folder
+skinparam folder {
+  'Font Style (inherits from Default)
+  FontSize FONT_SMALL
+  StereotypeFontColor TEXT_COLOR_DARK
+  StereotypeFontName FONTINT
+  StereotypeFontSize FONT_SMALL
+  StereotypeFontStyle plain
+
+  'Border Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+}
+
+'Frame
+skinparam frame {
+  'Font Style (inherits from Default)
+  'FontSize FONT_SMALL
+  StereotypeFontColor TEXT_COLOR_DARK
+  StereotypeFontName FONTINT
+  StereotypeFontSize FONT_SMALL
+  StereotypeFontStyle plain
+
+  'Border Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+}
+
+'Cloud
+skinparam cloud {
+  'Font Style (inherits from Default)
+  FontSize FONT_SMALL
+  StereotypeFontColor TEXT_COLOR_DARK
+  StereotypeFontName FONTINT
+  StereotypeFontSize FONT_SMALL
+  StereotypeFontStyle plain
+
+  'Border Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+}
+
+'Database
+skinparam database {
+  'Font Style (inherits from Default)
+  FontSize FONT_SMALL
+  StereotypeFontColor TEXT_COLOR_DARK
+  StereotypeFontName FONTINT
+  StereotypeFontSize FONT_SMALL
+  StereotypeFontStyle plain
+
+  'Border Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+}
+
+'Package (default style)
+skinparam package {
+  'Style
+  TitleAlignment center
+  FontSize FONT_SMALL
+
+  'Font Style (inherits from Default)
+  StereotypeFontColor TEXT_COLOR_DARK
+  StereotypeFontName FONTINT
+  StereotypeFontSize FONT_SMALL
+  StereotypeFontStyle plain
+
+  'Border Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+  BorderThickness NORMAL
+}
+
+'Boundary
+skinparam boundary {
+  'Font Style (inherits from Default)
+  FontSize FONT_SMALL
+
+  'Border Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+}
+
+'Control
+skinparam control {
+  'Font Style (inherits from Default)
+  FontSize FONT_SMALL
+
+  'Border Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+}
+
+'Entity
+skinparam entity {
+  'Font Style (inherits from Default)
+  FontSize FONT_SMALL
+
+  'Border Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+}
+
+'Collections
+skinparam collections {
+  'Font Style (inherits from Default)
+  FontSize FONT_SMALL
+
+  'Border Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+}
+
+'Class
+skinparam class {
+  'Font Style (inherits from Default)
+  FontSize FONT_SMALL
+  StereotypeFontColor TEXT_COLOR_DARK
+  StereotypeFontName FONTINT
+  StereotypeFontSize FONT_SMALL
+  StereotypeFontStyle plain
+
+  'Color
+  BackgroundColor GROUP_BACKGROUND_COLOR
+  HeaderBackgroundColor BACKGROUND_COLOR
+  BorderColor DARK_BORDER_COLOR
+  BorderThickness NORMAL
+
+  'Attributions
+  AttributeFontColor TEXT_COLOR_DARK
+  AttributeFontName FONTINT
+  AttributeFontSize FONT_SMALL
+  AttributeFontStyle plain
+  AttributeIconSize 0
+}
+
+'Interface Class
+skinparam interface {
+  FontStyle italic
+}
+
+'Circled Character in Class Diagram'
+hide circle
+skinparam circled {
+  CharacterFontColor TEXT_COLOR_DARK
+  CharacterFontName FONTINT
+  CharacterFontSize FONT_SMALL
+  CharacterFontStyle plain
+  CharacterRadius 8
+}
